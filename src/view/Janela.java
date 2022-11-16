@@ -273,20 +273,20 @@ public class Janela extends JFrame implements View{
 		bookPanel.add(pricePanel);
 		
 		JPanel publishersPanel = new JPanel();
-		publishersPanel.setMaximumSize(new Dimension(1000,100));
+		publishersPanel.setMaximumSize(new Dimension(1000,155));
 		publishersPanel.setLayout(new BoxLayout(publishersPanel,BoxLayout.LINE_AXIS));
 		publisherTable.setModel(dtmPublisher2);
 		publisherTable.removeColumn(publisherTable.getColumn("Id"));
-		publisherPane.setPreferredSize(new Dimension(publishersPanel.getWidth(),100));
+		publisherPane.setPreferredSize(new Dimension(publishersPanel.getWidth(),155));
 		publishersPanel.add(publisherPane);
 		bookPanel.add(publishersPanel);
 		
 		JPanel authorsPanel = new JPanel();
-		authorsPanel.setMaximumSize(new Dimension(1000,100));
+		authorsPanel.setMaximumSize(new Dimension(1000,175));
 		authorsPanel.setLayout(new BoxLayout(authorsPanel,BoxLayout.LINE_AXIS));
 		authorTable.setModel(dtmAuthor2);
 		authorTable.removeColumn(authorTable.getColumn("Id"));
-		authorPane.setPreferredSize(new Dimension(authorsPanel.getWidth(),100));
+		authorPane.setPreferredSize(new Dimension(authorsPanel.getWidth(),175));
 		authorsPanel.add(authorPane);
 		bookPanel.add(authorsPanel);
 		
@@ -313,11 +313,11 @@ public class Janela extends JFrame implements View{
 		authorPanel2.setLayout(new BoxLayout(authorPanel2, BoxLayout.PAGE_AXIS));
 		
 		JPanel authorsPanel2 = new JPanel();
-		authorsPanel2.setMaximumSize(new Dimension(1000,100));
+		authorsPanel2.setMaximumSize(new Dimension(1000,300));
 		authorsPanel2.setLayout(new BoxLayout(authorsPanel2,BoxLayout.LINE_AXIS));
 		authorTable2.setModel(dtmAuthor3);
 		authorTable2.removeColumn(authorTable2.getColumn("Id"));
-		authorPane2.setPreferredSize(new Dimension(authorsPanel2.getWidth(),100));
+		authorPane2.setPreferredSize(new Dimension(authorsPanel2.getWidth(),300));
 		authorsPanel2.add(authorPane2);
 		authorPanel2.add(authorsPanel2);
 		
@@ -346,11 +346,11 @@ public class Janela extends JFrame implements View{
 		publisherPanel2.setLayout(new BoxLayout(publisherPanel2,BoxLayout.PAGE_AXIS));
 		
 		JPanel publishersPanel2 = new JPanel();
-		publishersPanel2.setMaximumSize(new Dimension(1000,100));
+		publishersPanel2.setMaximumSize(new Dimension(1000,300));
 		publishersPanel2.setLayout(new BoxLayout(publishersPanel2,BoxLayout.LINE_AXIS));
 		publisherTable2.setModel(dtmPublisher3);
 		publisherTable2.removeColumn(publisherTable2.getColumn("ID"));
-		publisherPane2.setPreferredSize(new Dimension(publisherPane2.getWidth(),100));
+		publisherPane2.setPreferredSize(new Dimension(publisherPane2.getWidth(),300));
 		publishersPanel2.add(publisherPane2);
 		publisherPanel2.add(publishersPanel2);
 		
@@ -380,12 +380,12 @@ public class Janela extends JFrame implements View{
 		bookPanel2.setLayout(new BoxLayout(bookPanel2, BoxLayout.PAGE_AXIS));
 		
 		JPanel booksPanel = new JPanel();
-		booksPanel.setMaximumSize(new Dimension(1000,100));
+		booksPanel.setMaximumSize(new Dimension(1000,300));
 		booksPanel.setLayout(new BoxLayout(booksPanel,BoxLayout.LINE_AXIS));
 		bookTable.setModel(dtmBook2);
 		bookTable.removeColumn(bookTable.getColumn("Id"));
 		bookTable.removeColumn(bookTable.getColumn("aId"));
-		bookPane.setPreferredSize(new Dimension(bookPane.getWidth(),100));
+		bookPane.setPreferredSize(new Dimension(bookPane.getWidth(),300));
 		booksPanel.add(bookPane);
 		bookPanel2.add(booksPanel);
 		
@@ -428,11 +428,11 @@ public class Janela extends JFrame implements View{
 		authorPanel3.setLayout(new BoxLayout(authorPanel3, BoxLayout.PAGE_AXIS));
 		
 		JPanel authorsPanel3 = new JPanel();
-		authorsPanel3.setMaximumSize(new Dimension(1000,250));
+		authorsPanel3.setMaximumSize(new Dimension(1000,400));
 		authorsPanel3.setLayout(new BoxLayout(authorsPanel3,BoxLayout.LINE_AXIS));
 		authorTable3.setModel(dtmAuthor3);
 		authorTable3.removeColumn(authorTable3.getColumn("Id"));
-		authorPane3.setPreferredSize(new Dimension(authorsPanel3.getWidth(),250));
+		authorPane3.setPreferredSize(new Dimension(authorsPanel3.getWidth(),400));
 		authorsPanel3.add(authorPane3);
 		authorPanel3.add(authorsPanel3);
 		
@@ -443,11 +443,11 @@ public class Janela extends JFrame implements View{
 		publisherPanel3.setLayout(new BoxLayout(publisherPanel3,BoxLayout.PAGE_AXIS));
 		
 		JPanel publishersPanel3 = new JPanel();
-		publishersPanel3.setMaximumSize(new Dimension(1000,250));
+		publishersPanel3.setMaximumSize(new Dimension(1000,400));
 		publishersPanel3.setLayout(new BoxLayout(publishersPanel3,BoxLayout.LINE_AXIS));
 		publisherTable3.setModel(dtmPublisher3);
 		publisherTable3.removeColumn(publisherTable3.getColumn("ID"));
-		publisherPane3.setPreferredSize(new Dimension(publisherPane3.getWidth(),250));
+		publisherPane3.setPreferredSize(new Dimension(publisherPane3.getWidth(),400));
 		publishersPanel3.add(publisherPane3);
 		publisherPanel3.add(publishersPanel3);
 		
@@ -458,12 +458,12 @@ public class Janela extends JFrame implements View{
 		bookPanel3.setLayout(new BoxLayout(bookPanel3, BoxLayout.PAGE_AXIS));
 		
 		JPanel booksPanel2 = new JPanel();
-		booksPanel2.setMaximumSize(new Dimension(1000,250));
+		booksPanel2.setMaximumSize(new Dimension(1000,400));
 		booksPanel2.setLayout(new BoxLayout(booksPanel2,BoxLayout.LINE_AXIS));
 		bookTable2.setModel(dtmBook2);
 		bookTable2.removeColumn(bookTable2.getColumn("Id"));
 		bookTable2.removeColumn(bookTable2.getColumn("aId"));
-		bookPane2.setPreferredSize(new Dimension(bookPane2.getWidth(),100));
+		bookPane2.setPreferredSize(new Dimension(bookPane2.getWidth(),400));
 		booksPanel2.add(bookPane2);
 		bookPanel3.add(booksPanel2);
 		
@@ -482,6 +482,7 @@ public class Janela extends JFrame implements View{
 		removePanel.add(comboBoxPanelRemove, BorderLayout.PAGE_START);
 		removePanel.add(cardPanelRemove, BorderLayout.CENTER);
 		
+		setTitle("Livraria Amazônia");
 		pack();
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setVisible(true);

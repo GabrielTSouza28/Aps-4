@@ -30,4 +30,10 @@ public class Book {
 		return price;
 	}
 
+	@Override
+	public String toString() {
+		return "Book [title=" + title + ", ISBN=" + ISBN + ", publisherId=" + publisherId + ", price=" + price + "]";
+	}
+
+	
 }

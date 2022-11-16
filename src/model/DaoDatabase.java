@@ -19,14 +19,18 @@ public class DaoDatabase implements Dao{
 	static private String DATABASE = "livraria";
 	static private String URL = "jdbc:mysql://localhost:3306/" + DATABASE;
 	
-	public static void testaConnection() {
-
+	@Override
+	public void init() {
+		
 		  try (Connection c = DriverManager.getConnection(URL, USER, PASS)){
 		    System.out.println("Conexao estabelecida");
 		  }catch(Exception e) {
 		    e.printStackTrace();
 		  }
-		}
+		
+	}
+	
+
 
 	@Override
 	public void addAuthor(Author author) {
@@ -288,6 +292,8 @@ public class DaoDatabase implements Dao{
 			
 			int result = pstm.executeUpdate();
 			
+			System.out.println("Resultado de remover" + author + ": " + result);
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -327,6 +333,8 @@ public class DaoDatabase implements Dao{
 			
 			int result = pstm.executeUpdate();
 			
+			System.out.println("Resultado de remover " + publisher + ": " + result);
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -346,6 +354,8 @@ public class DaoDatabase implements Dao{
 			
 			int result = pstm.executeUpdate();
 			
+			System.out.println("Resultado de editar " + publisher + ": " + result );
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -363,6 +373,8 @@ public class DaoDatabase implements Dao{
 			pstm.setString(1,book.getISBN());
 			
 			int result = pstm.executeUpdate();
+			
+			System.out.println("Resultado de remover " + book + ": " + result);
 			
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -383,6 +395,8 @@ public class DaoDatabase implements Dao{
 			pstm.setString(3,book.getISBN());
 			
 			int result = pstm.executeUpdate();
+			
+			System.out.println("Resultado de editar " + book + ": " + result);
 			
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -421,21 +435,6 @@ public class DaoDatabase implements Dao{
 		  return booksAuthors;
 	}
 	
-
-	
-
-	@Override
-	public void init() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void close() {
-		// TODO Auto-generated method stub
-		
-	}
-
 	@Override
 	public void removeBooksAuthor(Author author) {
 		final String query =  "DELETE FROM Booksauthors WHERE author_id  = ?";
@@ -446,6 +445,8 @@ public class DaoDatabase implements Dao{
 			pstm.setInt(1,author.getId());
 			
 			int result = pstm.executeUpdate();
+			
+			System.out.println("Resultado de remover " + author + ": " + result);
 			
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -560,11 +561,23 @@ public class DaoDatabase implements Dao{
 			
 			int result = pstm.executeUpdate();
 			
+			System.out.println("Resultado de remover " + book + ": " + result);
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 	}
+	
+	
+
+	@Override
+	public void close() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 
 	
 	
